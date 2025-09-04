@@ -1,45 +1,85 @@
-# credit-default-risk-prediction
-Credit default risk prediction using machine learning models (Python) with business insights via Power BI dashboard
+# Credit Default Risk Prediction
+
+This project predicts loan default risk using machine learning models (Python, Jupyter Notebook) and visualizes risk drivers with an interactive Power BI dashboard.  
+
+It combines insights from two datasets:
+- **LendingClub Accepted Loans** (real-world US lending data for model training/testing)  
+- **Kaggle Financial Risk Data – Large** (synthetic but large-scale dataset, used for both modeling and dashboarding)  
 
 ---
 
-## 🔧 Methodology
-### Data Preprocessing & Feature Engineering
-- Cleaned LendingClub dataset (missing values, encoding, outlier handling)  
-- Created features: credit score bands, age groups, DTI ranges, employment categories, loan purpose groupings  
+## 📊 Project Overview
+Lending institutions face significant risk from borrower defaults.  
+This project explores borrower features (credit score, DTI, employment, loan purpose, etc.) and applies machine learning models to predict default risk.  
+A Power BI dashboard highlights key drivers of default and presents insights in a business-friendly format.  
 
-### Modeling
-Trained and compared 4 machine learning models:
+---
+
+## 🗂️ Repository Structure
+
+
+---
+
+## 🔧 Data Preprocessing & Feature Engineering
+- Cleaned and preprocessed **two datasets independently** since they had different schemas:
+  - **LendingClub Accepted Loans**  
+  - **Kaggle Financial Risk Data – Large**
+- Handled missing values, normalized numeric fields, and encoded categorical variables  
+- Created engineered features such as:
+  - Credit score bands  
+  - Age groups  
+  - DTI ranges  
+  - Employment categories  
+  - Loan purpose groupings  
+
+---
+
+## 🤖 Modeling
+Because the datasets had different structures, I trained **two separate models**, one for each dataset.  
+
+### Algorithms Tested
 - Logistic Regression  
 - Decision Tree  
 - Random Forest  
 - Neural Network (FCNN)  
 
 ### Evaluation Metrics
-- Accuracy, Precision, Recall, F1 Score, AUC  
+- Accuracy  
+- Precision  
+- Recall  
+- F1 Score  
+- AUC (Area Under ROC Curve)  
 
 ---
 
 ## 📈 Results
+
+### LendingClub Model
 - **Neural Network (FCNN)** achieved the best overall performance:  
   - Recall = **98.3%**  
   - AUC = **0.801**  
   - Accuracy = 74.7%  
-- **Decision Tree** achieved almost perfect recall (99.9%) but lower AUC (0.800), suggesting possible overfitting.  
-- **Random Forest** offered a strong balance with 93% recall.  
-- **Logistic Regression** served as a baseline.  
+- **Decision Tree** reached near-perfect Recall (99.9%) but lower AUC, suggesting possible overfitting.  
+- **Random Forest** provided strong Recall (93%) but slightly weaker balance.  
+- **Logistic Regression** served as a baseline with moderate performance.  
+
+### Kaggle Model
+- Similar trends were observed: credit score, DTI, employment status, and loan purpose were consistent drivers of risk.  
+- Neural Network again performed best overall, confirming patterns across datasets.  
 
 ---
 
 ## 📊 Dashboard (Kaggle Dataset)
-Power BI dashboard built on the Kaggle Financial Risk Data – Large dataset highlights:
-- **Default Rate by DTI**: sharp increase when DTI ≥ 0.4  
-- **Default Rate by Age**: higher risk in younger (18–25) and older (56+) borrowers  
-- **Employment Status**: unemployed and self-employed groups trend riskier  
-- **Loan Purpose**: education loans show the highest default rate  
-- **Credit Score**: approval rates increase sharply above ~600  
+The **Power BI dashboard** built on the Kaggle dataset highlights:  
+- **Default Rate by DTI** → sharp increase when DTI ≥ 0.4  
+- **Default Rate by Age** → higher risk in younger (18–25) and older (56+) borrowers  
+- **Employment Status** → unemployed and self-employed groups trend riskier  
+- **Loan Purpose** → education loans show the highest default rate  
+- **Credit Score** → approval rates increase sharply above ~600
 
-![Dashboard Screenshot](images/dashboard.png)  
+  
+<img width="2074" height="1164" alt="image" src="https://github.com/user-attachments/assets/c78b3140-3310-4981-8374-73c937b22c0b" />
+
 
 ---
 
@@ -50,9 +90,10 @@ Power BI dashboard built on the Kaggle Financial Risk Data – Large dataset hig
 ---
 
 ## 🔮 Future Work
-- Test XGBoost / LightGBM models  
+- Test additional models (XGBoost, LightGBM)  
+- Hyperparameter tuning for Neural Networks  
 - Deploy as an interactive web app  
-- Add explainability layer (e.g., SHAP values)  
+- Add explainability layer (e.g., SHAP values for feature importance)  
 
 ---
 
@@ -63,4 +104,5 @@ Power BI dashboard built on the Kaggle Financial Risk Data – Large dataset hig
 ---
 
 ## ✨ Key Takeaway
-Machine learning models (particularly Neural Networks) can significantly reduce missed defaults, while dashboards allow business stakeholders to identify risk drivers quickly and intuitively.
+By cleaning and modeling **two different datasets** independently, this project validates that key risk drivers (credit score, DTI, employment, loan purpose) remain consistent across sources.  
+The **Neural Network** model delivered the strongest balance of recall and generalization, while the **Power BI dashboard** translates these findings into actionable insights for business users.  
