@@ -80,6 +80,7 @@ The **Power BI dashboard** built on the Kaggle dataset highlights:
   
 <img width="2074" height="1164" alt="image" src="https://github.com/user-attachments/assets/c78b3140-3310-4981-8374-73c937b22c0b" />
 
+<img width="2074" height="1174" alt="image" src="https://github.com/user-attachments/assets/88ace7f1-58d6-47d8-8328-fd22402b5473" />
 
 ---
 
