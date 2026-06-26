@@ -2,6 +2,12 @@
 
 This project predicts loan default risk using machine learning models (Python, Jupyter Notebook) and visualizes risk drivers with an interactive Power BI dashboard.  
 
+<img width="2074" height="1164" alt="image" src="https://github.com/user-attachments/assets/c78b3140-3310-4981-8374-73c937b22c0b" />
+
+<img width="2074" height="1174" alt="image" src="https://github.com/user-attachments/assets/88ace7f1-58d6-47d8-8328-fd22402b5473" />
+
+---
+
 It combines insights from two datasets:
 - **LendingClub Accepted Loans** (real-world US lending data for model training/testing)  
 - **Kaggle Financial Risk Data – Large** (synthetic but large-scale dataset, used for both modeling and dashboarding)  
@@ -78,11 +84,7 @@ The **Power BI dashboard** built on the Kaggle dataset highlights:
 - **Credit Score** → approval rates increase sharply above ~600
 
   
-<img width="2074" height="1164" alt="image" src="https://github.com/user-attachments/assets/c78b3140-3310-4981-8374-73c937b22c0b" />
 
-<img width="2074" height="1174" alt="image" src="https://github.com/user-attachments/assets/88ace7f1-58d6-47d8-8328-fd22402b5473" />
-
----
 
 ## 🚀 How to Run
 1. Open the Jupyter Notebook (`Credit Default Risk.ipynb`) in Jupyter or VS Code and run all cells.  
