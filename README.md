@@ -46,23 +46,11 @@ This project was designed to answer the following business questions:
 
 # 🗂️ Repository Structure
 
-```text
 Credit-Default-Risk-Prediction/
 │
-├── data/
-│
-├── notebooks/
-│   └── Credit Default Risk.ipynb
-│
-├── dashboards/
-│   └── Credit Default Risk.pbix
-│
-├── images/
-│
+├── Credit Default Risk.ipynb
+├── Credit Default Risk.pbix
 ├── README.md
-│
-└── requirements.txt
-```
 
 ---
 
